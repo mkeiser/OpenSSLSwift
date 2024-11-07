@@ -105,4 +105,11 @@
           checksum: "hash from step 11"
          ),
     ```
+    
+ 13. To add the package to `SketchCloudKit`
+ 
+     - close the Sketch project in Xcode
+     - Open `SketchCloudKit` in Xcode
+     - Add package, at the openssl product to both mac and ios targets
+     - Close `SketchCloudKit`, open Sketch project, clean package cache etc..
 
