@@ -7,7 +7,7 @@
     
     - `mkdir macOS_arm64`
     - `cd macOS_arm64 `
-    - `../Configure darwin64-arm64 -mmacosx-version-min=13.0 --release --prefix=`pwd`/install`
+    - ``../Configure darwin64-arm64 -mmacosx-version-min=13.0 --release --prefix=`pwd`/install``
     - `make`
     - `make install`
 
@@ -16,7 +16,7 @@
 
     - `mkdir macOS_x86_64`
     - `cd macOS_x86_64 `
-    - `../Configure darwin64-x86_64 -mmacosx-version-min=13.0 --release --prefix=`pwd`/install`
+    - ``../Configure darwin64-x86_64 -mmacosx-version-min=13.0 --release --prefix=`pwd`/install``
     - `make`
     - `make install`
 
@@ -24,7 +24,7 @@
 
     - `mkdir ios_arm64`
     - `cd ios_arm64 `
-    - `../Configure ios64-xcrun -mios-version-min=16 --release --prefix=`pwd`/install`
+    - ``../Configure ios64-xcrun -mios-version-min=16 --release --prefix=`pwd`/install``
     - `make`
     - `make install`
 
@@ -32,7 +32,7 @@
 
     - `mkdir ios_sim_arm64`
     - `cd ios_sim_arm64 `
-    - `../Configure iossimulator-arm64-xcrun -mios-simulator-version-min=16 --release --prefix=`pwd`/install`
+    - ``../Configure iossimulator-arm64-xcrun -mios-simulator-version-min=16 --release --prefix=`pwd`/install``
     - `make`
     - `make install`
 
@@ -40,7 +40,7 @@
 
     - `mkdir ios_sim_x86_64`
     - `cd ios_sim_x86_64 `
-    - `../Configure iossimulator-x86_64-xcrun -mios-simulator-version-min=16 --release --prefix=`pwd`/install`
+    - ``../Configure iossimulator-x86_64-xcrun -mios-simulator-version-min=16 --release --prefix=`pwd`/install``
     - `make`
     - `make install`
 
