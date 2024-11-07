@@ -1,7 +1,7 @@
 # How To Create the OpenSSL Package
 
 1. Checkout the source at the version you want (at the time of speaking we use 3.4)
-2. The configure, build, and "install" for each of the needed architectures, like this:
+2. Configure, build, and "install" for each of the needed architectures, like this:
 
     #### macOS Apple Silicon:
     
@@ -60,6 +60,8 @@
 
    - `mkdir iOS_sim_final`
    - `cp ios_sim_arm64/install/include iOS_sim_final`
+
+   NOTE: We assume the headers are identical for both architectures in the case where we will produce fat binaries (macOS and ios_simulator platforms)
 
 5. Copy iOS executable:
 
