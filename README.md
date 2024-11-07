@@ -70,19 +70,19 @@
    - `lipo -create macOS_arm64/install/lib/openssl.a macOS_x86_64/install/lib/openssl.a -create macOS_final/openssl.a`
    - `lipo -create ios_sim_arm64/install/lib/openssl.a ios_sim_x86_64/install/lib/openssl.a -create iOS_sim_final/openssl.a`
 
- 7. Create xcframework:
+7. Create xcframework:
    - `xcodebuild -create-xcframework -library macOS_final/libcrypto.a -headers macOS_final/include  -library iOS_final/libcrypto.a  -headers iOS_final/include -library iOS_sim_final/libcrypto.a  -headers iOS_sim_final/include  -output xcframeworks/openssl.xcframework`
 
- 8. For all of the frameworks inside the created xcframework, create a module map. It should go into the `Headers` directory for each platform:
+8. For all of the frameworks inside the created xcframework, create a module map. It should go into the `Headers` directory for each platform:
 
 	```
 	module openssl {
-  umbrella "openssl"
-  exclude header "openssl/asn1_mac.h"
-  export *
-  module * { export * }
-  }
-```
+   		umbrella "openssl"
+  		exclude header "openssl/asn1_mac.h"
+ 	 	export *
+  		module * { export * }
+  	}
+   ```
 
 9. Codesign the framework
 
@@ -98,15 +98,15 @@
 	
 12. Create/Adjust the swift package definition:
 
-	```
+		```
         .binaryTarget(
           name: "openssl",
           url: "https://host/openssl.xcframework.zip",
           checksum: "hash from step 11"
          ),
-    ```
+	    ```
     
- 13. To add the package to `SketchCloudKit`
+13. To add the package to `SketchCloudKit`
  
      - close the Sketch project in Xcode
      - Open `SketchCloudKit` in Xcode
