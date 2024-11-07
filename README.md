@@ -69,8 +69,8 @@
 
 6. Create fat binaries for the architectures that require it:
 
-   - `lipo -create macOS_arm64/install/lib/openssl.a macOS_x86_64/install/lib/openssl.a -create macOS_final/openssl.a`
-   - `lipo -create ios_sim_arm64/install/lib/openssl.a ios_sim_x86_64/install/lib/openssl.a -create iOS_sim_final/openssl.a`
+   - `lipo -create macOS_arm64/install/lib/openssl.a macOS_x86_64/install/lib/openssl.a -output macOS_final/openssl.a`
+   - `lipo -create ios_sim_arm64/install/lib/openssl.a ios_sim_x86_64/install/lib/openssl.a -output iOS_sim_final/openssl.a`
 
 7. Create xcframework:
    - `xcodebuild -create-xcframework -library macOS_final/libcrypto.a -headers macOS_final/include  -library iOS_final/libcrypto.a  -headers iOS_final/include -library iOS_sim_final/libcrypto.a  -headers iOS_sim_final/include  -output xcframeworks/openssl.xcframework`
